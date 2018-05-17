@@ -1,32 +1,35 @@
-.notification {
+.wrapper, .success, .notice, .warning, .error {
   position: relative;
   padding: 10px;
-  background: hsl(0, 0%, 70%);
-  border: 1px solid hsl(0, 0%, 20%);
   color: #000;
   transition: opacity 0.3s ease-out;
 }
 
-.notification + .notification {
+.wrapper + .wrapper {
   margin-top: 20px;
 }
 
-.notification--success {
+.wrapper {
+  background: hsl(0, 0%, 70%);
+  border: 1px solid hsl(0, 0%, 20%);
+}
+
+.success {
   background: hsl(90, 100%, 70%);
   border-color: hsl(90, 100%, 0%);
 }
 
-.notification--notice {
+.notice {
   background: hsl(200, 100%, 70%);
   border-color: hsl(200, 100%, 0%);
 }
 
-.notification--warning {
+.warning {
   background: hsl(50, 100%, 70%);
   border-color: hsl(50, 100%, 0%);
 }
 
-.notification--error {
+.error {
   background: hsl(0, 100%, 70%);
   border-color: hsl(0, 100%, 0%);
 }

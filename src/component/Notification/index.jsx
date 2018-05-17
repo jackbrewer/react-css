@@ -1,17 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import './Notification.css'
 
 const Notification = ({ children, className, handleDismiss, heading, text, state }) => {
   if (!children && !heading && !text) return null
-  const componentClassName = classNames(
-    'notification',
-    state ? `notification--${state}` : null,
-    className
-  )
+
   return (
-    <div className={componentClassName}>
+    <div styleName={state ? state : 'wrapper'}>
       {handleDismiss &&
         <button className="notification__action" onClick={handleDismiss}>
           x
